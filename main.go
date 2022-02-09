@@ -1,7 +1,25 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+
+	"github.com/hyoinandout/hyoincoin/blockchain"
+)
+
+type block struct {
+	data     string
+	hash     string
+	prevHash string
+}
 
 func main() {
-	fmt.Println("It works!")
+	chain := blockchain.GetBlockchain()
+	chain.AddBlock("Second Block")
+	chain.AddBlock("Third Block")
+	chain.AddBlock("Fourth Block")
+	for _, block := range chain.AllBlocks() {
+		fmt.Printf("Data : %s\n", block.Data)
+		fmt.Printf("Hash : %s\n", block.Hash)
+		fmt.Printf("PrevHash : %s\n", block.PrevHash)
+	}
 }
