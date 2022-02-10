@@ -1,7 +1,7 @@
 package main
 
-import "github.com/hyoinandout/hyoincoin/explorer"
+import "github.com/hyoinandout/hyoincoin/rest"
 
 func main() {
-	explorer.Start()
+	rest.Start(4000)
 }
