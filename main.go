@@ -1,7 +1,7 @@
 package main
 
-import "github.com/hyoinandout/hyoincoin/rest"
+import "github.com/hyoinandout/hyoincoin/cli"
 
 func main() {
-	rest.Start(4000)
+	cli.Start()
 }
